@@ -5,7 +5,6 @@ import emailIcon from "/src/assets/email.png";
 import callIcon from "/src/assets/callicon2.png";
 import locationIcon from "/src/assets/location.webp";
 import "animate.css/animate.min.css";
-import ScrollAnimation from "react-animate-on-scroll";
 const Home: React.FC = () => {
   return (
     <div>
