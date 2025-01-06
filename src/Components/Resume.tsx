@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import cvFile from "/src/assets/cv.pdf";
+import cvFile from "/assets/cv.pdf";
 
 const Resume: React.FC = () => {
   // Animation variants for sections
@@ -241,6 +241,6 @@ const Resume: React.FC = () => {
       </div>
     </section>
   );
-};
+};  
 
 export default Resume;

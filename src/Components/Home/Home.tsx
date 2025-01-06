@@ -1,9 +1,9 @@
 import React from "react";
-import photo from "/src/assets/photo.jpg";
+import photo from "/assets/photo.jpg";
 import Navbar from "./Navbar";
-import emailIcon from "/src/assets/email.png";
-import callIcon from "/src/assets/callicon2.png";
-import locationIcon from "/src/assets/location.webp";
+import emailIcon from "/assets/email.png";
+import callIcon from "/assets/callicon2.png";
+import locationIcon from "/assets/location.webp";
 import "animate.css/animate.min.css";
 const Home: React.FC = () => {
   return (

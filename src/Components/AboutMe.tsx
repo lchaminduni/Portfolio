@@ -10,7 +10,7 @@ const AboutMe: React.FC = () => {
   return (
     <section
       className="bg-cover bg-center text-white min-h-screen py-12 mt-10 relative"
-      style={{ backgroundImage: 'url(/src/assets/bgimage.png)' }}
+      style={{ backgroundImage: 'url(/assets/bgimage.png)' }}
     >
       {/* Dark overlay to help text stand out */}
       <div className="absolute inset-0 bg-black opacity-60"></div>
@@ -90,7 +90,7 @@ const AboutMe: React.FC = () => {
               transition={{ delay: 0.2, duration: 0.8 }}
             >
               <img
-                src="/src/assets/cmjd.jpg"
+                src="/assets/cmjd.jpg"
                 alt="cmjd Certification"
                 className="w-full h-full object-contain rounded-lg mb-4 "
               />
@@ -107,7 +107,7 @@ const AboutMe: React.FC = () => {
               transition={{ delay: 0.2, duration: 0.8 }}
             >
               <img
-                src="/src/assets/webdesign1.png"
+                src="/assets/webdesign1.png"
                 alt="Web Design Certification"
                 className="w-full h-full object-contain rounded-lg mb-4 "
               />
@@ -124,7 +124,7 @@ const AboutMe: React.FC = () => {
               transition={{ delay: 0.4, duration: 0.8 }}
             >
               <img
-                src="/src/assets/frontend.png"
+                src="/assets/frontend.png"
                 alt="Frontend Development Certification"
                 className="w-full h-full object-contain rounded-lg mb-4"
               />
@@ -140,7 +140,7 @@ const AboutMe: React.FC = () => {
               transition={{ delay: 0.6, duration: 0.8 }}
             >
               <img
-                src="/src/assets/serverside.png"
+                src="/assets/serverside.png"
                 alt="Server Side Development Certification"
                 className="w-full h-full object-contain rounded-lg mb-4"
               />
@@ -156,7 +156,7 @@ const AboutMe: React.FC = () => {
               transition={{ delay: 0.8, duration: 0.8 }}
             >
               <img
-                src="/src/assets/python1.png"
+                src="/assets/python1.png"
                 alt="Python Certification 1"
                 className="w-full h-full object-contain rounded-lg mb-4"
               />
@@ -172,7 +172,7 @@ const AboutMe: React.FC = () => {
               transition={{ delay: 1, duration: 0.8 }}
             >
               <img
-                src="/src/assets/python2.png"
+                src="/assets/python2.png"
                 alt="Python Certification 2"
                 className="w-full h-full object-contain rounded-lg mb-4"
               />
@@ -188,7 +188,7 @@ const AboutMe: React.FC = () => {
               transition={{ delay: 1, duration: 0.8 }}
             >
               <img
-                src="/src/assets/MSProject.png"
+                src="/assets/MSProject.png"
                 alt="MS Project"
                 className="w-full h-full object-contain rounded-lg mb-4"
               />
@@ -204,7 +204,7 @@ const AboutMe: React.FC = () => {
               transition={{ delay: 1, duration: 0.8 }}
             >
               <img
-                src="/src/assets/MepQs.png"
+                src="/assets/MepQs.png"
                 alt="MEP QS"
                 className="w-full h-full object-contain rounded-lg mb-4"
               />
@@ -219,7 +219,7 @@ const AboutMe: React.FC = () => {
               transition={{ delay: 1, duration: 0.8 }}
             >
               <img
-                src="/src/assets/CivilQs.png"
+                src="/assets/CivilQs.png"
                 alt="Civil QS"
                 className="w-full h-full object-contain rounded-lg mb-4"
               />

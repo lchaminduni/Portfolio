@@ -8,7 +8,7 @@ import Resume from './Components/Resume';
 
 function App() {
   return (
-    <Router basename="/portfolio">
+    <Router >
       <div className="App">
         {/* Navigation Bar */}
         <Navbar />
@@ -24,4 +24,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; 
