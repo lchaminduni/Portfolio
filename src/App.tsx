@@ -8,7 +8,7 @@ import Resume from './Components/Resume';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/portfolio">
       <div className="App">
         {/* Navigation Bar */}
         <Navbar />
@@ -17,7 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} /> {/* Home Page */}
           <Route path="/about" element={<AboutMe />} /> {/* About Me Page */}
-          <Route path="/resume" element={<Resume/>} />
+          <Route path="/resume" element={<Resume/>} />{/*Resume Page*/}
         </Routes>
       </div>
     </Router>
