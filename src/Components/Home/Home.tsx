@@ -16,7 +16,7 @@ const Home: React.FC = () => {
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 lg:px-20">
           {/* Text Content */}
           <div className="text-gray-800 md:w-1/2 text-center md:text-left">
-          <h1 className="text-4xl text-yellow-500 md:text-6xl font-bold mb-4 ">
+          <h1 className="text-4xl text-yellow-500 md:text-6xl font-bold mb-4 mt-20">
     <span className="inline-block animate-slide">
       Hi, I'm Lihini Chamiduni
     </span>
@@ -31,7 +31,7 @@ const Home: React.FC = () => {
           </div>
 
           {/* Profile Image */}
-          <div className="mt-10 md:mt-0 md:w-1/2 flex justify-center md:justify-end">
+          <div className="mt-10 mb-10 md:mt-0 md:w-1/2 flex justify-center md:justify-end">
             <img
               src={photo}
               alt="Professional Profile"
@@ -45,13 +45,13 @@ const Home: React.FC = () => {
       </section>
 
       {/* Contact Section */}
-<section className="bg-yellow-400 min-h-[33.33vh] flex items-center justify-center">
+<section className="bg-yellow-400 min-h-[33.33vh] flex items-center justify-center ">
   <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 lg:px-20">
     <div className="text-gray-800 w-full text-center">
-      <h2 className="text-2xl md:text-4xl font-bold mb-6 text-gray-700">
+      <h2 className="text-2xl md:text-4xl font-bold mb-8 text-gray-700">
         Get In Touch
       </h2>
-      <p className="text-lg md:text-xl text-gray-600 mb-8">
+      <p className="text-lg md:text-xl text-gray-600 mb-6">
         Feel free to reach out to me via email, phone, or visit me in person.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
