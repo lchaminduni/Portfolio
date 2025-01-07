@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
         {/* Desktop Navigation Links */}
         <div className="hidden md:flex gap-8">
           {[
-            { name: "Home", path: "/", icon: <FaHome /> },
+            { name: "Home", path: "/portfolio/", icon: <FaHome /> },
             { name: "About Me", path: "/about", icon: <FaUser /> },
             { name: "Projects", path: "/projects", icon: <FaProjectDiagram /> },
             { name: "Resume", path: "/resume", icon: <FaFileAlt /> },
