@@ -19,11 +19,11 @@ const Navbar: React.FC = () => {
         <div className="hidden md:flex gap-8">
           {[
             { name: "Home", path: "/portfolio", icon: <FaHome /> },
-            { name: "About Me", path: "/about", icon: <FaUser /> },
-            { name: "Projects", path: "/projects", icon: <FaProjectDiagram /> },
-            { name: "Resume", path: "/resume", icon: <FaFileAlt /> },
-            { name: "Achievement", path: "/achievement", icon: <FaTrophy /> },
-            { name: "Blogs", path: "/blogs", icon: <FaBlog /> },
+            { name: "About Me", path: "/portfolio/about", icon: <FaUser /> },
+            { name: "Projects", path: "/portfolio/projects", icon: <FaProjectDiagram /> },
+            { name: "Resume", path: "/portfolio/resume", icon: <FaFileAlt /> },
+            { name: "Achievement", path: "/portfolio/achievement", icon: <FaTrophy /> },
+            { name: "Blogs", path: "/portfolio/blogs", icon: <FaBlog /> },
           ].map((item, index) => (
             <Link
               key={index}
@@ -66,11 +66,11 @@ const Navbar: React.FC = () => {
       >
         {[
           { name: "Home", path: "/portfolio", icon: <FaHome /> },
-          { name: "About Me", path: "/about", icon: <FaUser /> },
-          { name: "Projects", path: "/projects", icon: <FaProjectDiagram /> },
-          { name: "Resume", path: "/resume", icon: <FaFileAlt /> },
-          { name: "Achievement", path: "/achievement", icon: <FaTrophy /> },
-          { name: "Blogs", path: "/blogs", icon: <FaBlog /> },
+          { name: "About Me", path: "/portfolio/about", icon: <FaUser /> },
+          { name: "Projects", path: "/portfolio/projects", icon: <FaProjectDiagram /> },
+          { name: "Resume", path: "/portfolio/resume", icon: <FaFileAlt /> },
+          { name: "Achievement", path: "/portfolio/achievement", icon: <FaTrophy /> },
+          { name: "Blogs", path: "/portfolio/blogs", icon: <FaBlog /> },
         ].map((item, index) => (
           <Link
             key={index}
