@@ -15,7 +15,7 @@ function App() {
         
         {/* Define Routes for Navigation */}
         <Routes>
-          <Route path="/portfolio/" element={<Home />} /> {/* Home Page */}
+          <Route path="/portfolio" element={<Home />} /> {/* Home Page */}
           <Route path="/about" element={<AboutMe />} /> {/* About Me Page */}
           <Route path="/resume" element={<Resume/>} />{/*Resume Page*/}
         </Routes>

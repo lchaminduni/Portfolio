@@ -60,7 +60,7 @@ const Resume: React.FC = () => {
             {[
               {
                 title: "Bachelor of Information Technology (BIT)",
-                subtitle: "University of Moratuwa (2020 - Present)",
+                subtitle: "University of Moratuwa (2024 - 2026)",
               },
               {
                 title: "Diploma in Comprehensive Master Java Developer (CMJD)",
