@@ -16,7 +16,7 @@ const Home: React.FC = () => {
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 lg:px-20">
           {/* Text Content */}
           <div className="text-gray-800 md:w-1/2 text-center md:text-left">
-          <h1 className="text-4xl text-yellow-500 md:text-6xl font-bold mb-4">
+          <h1 className="text-4xl text-yellow-500 md:text-6xl font-bold mb-4 ">
     <span className="inline-block animate-slide">
       Hi, I'm Lihini Chamiduni
     </span>

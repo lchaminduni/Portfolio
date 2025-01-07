@@ -1,5 +1,15 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import backgroundImage from "/assets/bgimage.png";
+import certi1 from "/assets/cmjd.jpg";
+import certi2 from "/assets/webdesign1.png";
+import certi3 from "/assets/frontend.png";
+import certi4 from "/assets/serverside.png";
+import certi5 from "/assets/python1.png";
+import certi6 from "/assets/python2.png";
+import certi7 from "/assets/MSProject.png";
+import certi8 from "/assets/MepQs.png";
+import certi9 from "/assets/CivilQs.png";
 
 const AboutMe: React.FC = () => {
     const [showContact, setShowContact] = useState(false);
@@ -10,7 +20,7 @@ const AboutMe: React.FC = () => {
   return (
     <section
       className="bg-cover bg-center text-white min-h-screen py-12 mt-10 relative"
-      style={{ backgroundImage: 'url(/assets/bgimage.png)' }}
+      style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* Dark overlay to help text stand out */}
       <div className="absolute inset-0 bg-black opacity-60"></div>
@@ -90,7 +100,7 @@ const AboutMe: React.FC = () => {
               transition={{ delay: 0.2, duration: 0.8 }}
             >
               <img
-                src="/assets/cmjd.jpg"
+                src={certi1}
                 alt="cmjd Certification"
                 className="w-full h-full object-contain rounded-lg mb-4 "
               />
@@ -99,7 +109,7 @@ const AboutMe: React.FC = () => {
 
             </motion.div>
 
-            {/* Certification 1 - Web Design */}
+            {/* Certification 2 - Web Design */}
             <motion.div
               className="bg-opacity-70 bg-gray-600 text-white rounded-2xl shadow-lg p-6 flex flex-col items-center"
               initial={{ opacity: 0, y: 50 }}
@@ -107,7 +117,7 @@ const AboutMe: React.FC = () => {
               transition={{ delay: 0.2, duration: 0.8 }}
             >
               <img
-                src="/assets/webdesign1.png"
+                src={certi2}
                 alt="Web Design Certification"
                 className="w-full h-full object-contain rounded-lg mb-4 "
               />
@@ -116,7 +126,7 @@ const AboutMe: React.FC = () => {
 
             </motion.div>
 
-            {/* Certification 2 - Frontend */}
+            {/* Certification 3 - Frontend */}
             <motion.div
               className="bg-opacity-70 bg-gray-600 text-white rounded-2xl shadow-lg p-6 flex flex-col items-center"
               initial={{ opacity: 0, y: 50 }}
@@ -124,7 +134,7 @@ const AboutMe: React.FC = () => {
               transition={{ delay: 0.4, duration: 0.8 }}
             >
               <img
-                src="/assets/frontend.png"
+                src={certi3}
                 alt="Frontend Development Certification"
                 className="w-full h-full object-contain rounded-lg mb-4"
               />
@@ -132,7 +142,7 @@ const AboutMe: React.FC = () => {
               <h3 className="text-xl font-bold text-gray-100">University of Moratuwa (CODL) </h3>
             </motion.div>
 
-            {/* Certification 3 - Server Side */}
+            {/* Certification 4 - Server Side */}
             <motion.div
               className="bg-opacity-70 bg-gray-600 text-white rounded-2xl shadow-lg p-6 flex flex-col items-center"
               initial={{ opacity: 0, y: 50 }}
@@ -140,7 +150,7 @@ const AboutMe: React.FC = () => {
               transition={{ delay: 0.6, duration: 0.8 }}
             >
               <img
-                src="/assets/serverside.png"
+                src={certi4}
                 alt="Server Side Development Certification"
                 className="w-full h-full object-contain rounded-lg mb-4"
               />
@@ -148,7 +158,7 @@ const AboutMe: React.FC = () => {
               <h3 className="text-xl font-bold text-gray-100">University of Moratuwa (CODL) </h3>
             </motion.div>
 
-            {/* Certification 4 - Python 1 */}
+            {/* Certification 5 - Python 1 */}
             <motion.div
               className="bg-opacity-70 bg-gray-600 text-white rounded-2xl shadow-lg p-6 flex flex-col items-center"
               initial={{ opacity: 0, y: 50 }}
@@ -156,7 +166,7 @@ const AboutMe: React.FC = () => {
               transition={{ delay: 0.8, duration: 0.8 }}
             >
               <img
-                src="/assets/python1.png"
+                src={certi5}
                 alt="Python Certification 1"
                 className="w-full h-full object-contain rounded-lg mb-4"
               />
@@ -164,7 +174,7 @@ const AboutMe: React.FC = () => {
               <h3 className="text-xl font-bold text-gray-100">University of Moratuwa (CODL) </h3>
             </motion.div>
 
-            {/* Certification 5 - Python 2 */}
+            {/* Certification 6 - Python 2 */}
             <motion.div
               className="bg-opacity-70 bg-gray-600 text-white rounded-2xl shadow-lg p-6 flex flex-col items-center"
               initial={{ opacity: 0, y: 50 }}
@@ -172,7 +182,7 @@ const AboutMe: React.FC = () => {
               transition={{ delay: 1, duration: 0.8 }}
             >
               <img
-                src="/assets/python2.png"
+                src={certi6}
                 alt="Python Certification 2"
                 className="w-full h-full object-contain rounded-lg mb-4"
               />
@@ -180,7 +190,7 @@ const AboutMe: React.FC = () => {
               <h3 className="text-xl font-bold text-gray-100">University of Moratuwa (CODL) </h3>
             </motion.div>
 
-            {/* Certification 6 - MS Project */}
+            {/* Certification 7 - MS Project */}
             <motion.div
               className="bg-opacity-70 bg-gray-600 text-white rounded-2xl shadow-lg p-6 flex flex-col items-center"
               initial={{ opacity: 0, y: 50 }}
@@ -188,7 +198,7 @@ const AboutMe: React.FC = () => {
               transition={{ delay: 1, duration: 0.8 }}
             >
               <img
-                src="/assets/MSProject.png"
+                src={certi7}
                 alt="MS Project"
                 className="w-full h-full object-contain rounded-lg mb-4"
               />
@@ -196,7 +206,7 @@ const AboutMe: React.FC = () => {
               <h3 className="text-xl font-bold text-gray-100">Tectra Academy</h3>
             </motion.div>
 
-            {/* Certification 7 - MEP QS */}
+            {/* Certification 8 - MEP QS */}
             <motion.div
               className="bg-opacity-70 bg-gray-600 text-white rounded-2xl shadow-lg p-6 flex flex-col items-center"
               initial={{ opacity: 0, y: 50 }}
@@ -204,14 +214,14 @@ const AboutMe: React.FC = () => {
               transition={{ delay: 1, duration: 0.8 }}
             >
               <img
-                src="/assets/MepQs.png"
+                src={certi8}
                 alt="MEP QS"
                 className="w-full h-full object-contain rounded-lg mb-4"
               />
               <h3 className="text-xl font-bold text-gray-100">MEP QS</h3>
               <h3 className="text-xl font-bold text-gray-100">Tectra Academy</h3>
             </motion.div>
-            {/* Certification 8 - Civil QS */}
+            {/* Certification 9 - Civil QS */}
             <motion.div
               className="bg-opacity-70 bg-gray-600 text-white rounded-2xl shadow-lg p-6 flex flex-col items-center"
               initial={{ opacity: 0, y: 50 }}
@@ -219,7 +229,7 @@ const AboutMe: React.FC = () => {
               transition={{ delay: 1, duration: 0.8 }}
             >
               <img
-                src="/assets/CivilQs.png"
+                src={certi9}
                 alt="Civil QS"
                 className="w-full h-full object-contain rounded-lg mb-4"
               />
