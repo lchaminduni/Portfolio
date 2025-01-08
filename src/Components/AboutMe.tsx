@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import backgroundImage from "/assets/bground5.jpg";
-
+import image from "/assets/myphoto.jpg";
 const AboutMe: React.FC = () => {
   const [showContact, setShowContact] = useState(false);
 
@@ -51,6 +51,17 @@ const AboutMe: React.FC = () => {
         >
           About Me
         </motion.h2>
+        {/* Profile Image */}
+        <div className="mt-10  flex justify-center ">
+            <img
+              src={image}
+              alt="Professional Profile"
+              className="w-64 h-64 rounded-full border-8 border-gray-800 shadow-2xl object-cover transform transition-transform duration-700 ease-in-out hover:rotate-3 hover:scale-110 hover:shadow-3xl hover:border-yellow-500"
+              style={{
+                boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.3)",
+              }}
+            />
+          </div>
         <motion.p
           className="mt-6 text-lg text-center text-gray-200"
           variants={sectionVariants}

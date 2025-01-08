@@ -1,5 +1,5 @@
 import React from "react";
-import photo from "/assets/photo.jpg";
+import photo from "/assets/me.jpg";
 import Navbar from "./Navbar";
 import emailIcon from "/assets/email.png";
 import callIcon from "/assets/callicon2.png";

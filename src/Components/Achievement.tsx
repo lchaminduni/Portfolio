@@ -37,7 +37,7 @@ const AboutMe: React.FC = () => {
           duration: 1.2,
           }}
         >
-        Achiement
+        Achiements
         </motion.h1>
 
         {/* Certifications Section */}
