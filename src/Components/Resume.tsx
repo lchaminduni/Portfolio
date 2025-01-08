@@ -69,7 +69,7 @@ const Resume: React.FC = () => {
               {
                 title:
                   "National Diploma for Industrial Technology-Civil Engineering (NVQ 5)",
-                subtitle: "Sri Lanka College of Technology, Rathmalana (2020 - 2021)",
+                subtitle: "Sri Lanka College of Technology, Rathmalana (2021 - 2023)",
               },
             ].map((item, index) => (
               <motion.div key={index} variants={itemVariants}>

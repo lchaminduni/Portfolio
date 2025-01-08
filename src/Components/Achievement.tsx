@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import backgroundImage from "/assets/bgimage.png";
+import backgroundImage from "/assets/bground5.jpg";
 import certi1 from "/assets/cmjd.jpg";
 import certi2 from "/assets/webdesign1.png";
 import certi3 from "/assets/frontend.png";
@@ -22,8 +22,7 @@ const AboutMe: React.FC = () => {
       className="bg-cover bg-center text-white min-h-screen py-12 mt-10 relative"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      {/* Dark overlay to help text stand out */}
-      <div className="absolute inset-0 bg-black opacity-60"></div>
+      
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Title with enhanced fade-in and scaling animation */}
@@ -200,59 +199,7 @@ const AboutMe: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Skills Section with fade-in and staggered effect */}
-        <motion.div
-          className="mt-12"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.5 }}
-        >
-          <motion.h2
-            className="text-4xl font-bold text-center text-yellow-500 mb-6"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-          >
-            My Skills
-          </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {/* Technical Skills */}
-            <motion.div
-              className="bg-opacity-70 bg-gray-600 text-white rounded-2xl shadow-lg p-8"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-            >
-              <h3 className="text-xl font-bold text-yellow-500 mb-4">Technical Skills</h3>
-              <ul className="list-disc ml-6">
-                <li>Backend Development: Java, Spring Boot</li>
-                <li>Frontend Development: React, HTML, CSS, JavaScript, TypeScript</li>
-                <li>Database Management: MySQL, SQL</li>
-                <li>Version Control: Git, GitHub</li>
-                <li>REST API Development</li>
-              </ul>
-            </motion.div>
-
-            
-
-            {/* Soft Skills */}
-            <motion.div
-              className="bg-opacity-70 bg-gray-600 text-white rounded-2xl shadow-lg p-8"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-            >
-              <h3 className="text-xl font-bold text-yellow-500 mb-4">Soft Skills</h3>
-              <ul className="list-disc ml-6">
-                <li>Problem-Solving</li>
-                <li>Teamwork</li>
-                <li>Adaptability</li>
-                <li>Time Management</li>
-              </ul>
-            </motion.div>
-          </div>
-        </motion.div>
-
+        
         {/* Call to Action Section with bounce effect */}
         <motion.div
       className="mt-12 text-center"
