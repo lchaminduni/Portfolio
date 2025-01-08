@@ -1,331 +1,199 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import backgroundImage from "/assets/bgimage.png";
-import certi1 from "/assets/cmjd.jpg";
-import certi2 from "/assets/webdesign1.png";
-import certi3 from "/assets/frontend.png";
-import certi4 from "/assets/serverside.png";
-import certi5 from "/assets/python1.png";
-import certi6 from "/assets/python2.png";
-import certi7 from "/assets/MSProject.png";
-import certi8 from "/assets/MepQs.png";
-import certi9 from "/assets/CivilQs.png";
+import backgroundImage from "/assets/bground5.jpg";
 
 const AboutMe: React.FC = () => {
-    const [showContact, setShowContact] = useState(false);
-    const handleGetInTouch = () => {
-        setShowContact(!showContact); // Toggle contact details visibility
-    };
+  const [showContact, setShowContact] = useState(false);
+
+  const handleGetInTouch = () => {
+    setShowContact(!showContact); // Toggle contact details visibility
+  };
+
+  // Animation Variants
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
+  const listVariants = {
+    hidden: { opacity: 0, y: 10 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 10 },
+    visible: { opacity: 1, y: 0 },
+  };
 
   return (
     <section
       className="bg-cover bg-center text-white min-h-screen py-12 mt-10 relative"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      {/* Dark overlay to help text stand out */}
-      <div className="absolute inset-0 bg-black opacity-60"></div>
-
       <div className="container mx-auto px-6 relative z-10">
-        {/* Title with enhanced fade-in and scaling animation */}
-        <motion.h1
-          className="text-5xl md:text-6xl font-bold text-center mb-8 text-yellow-500"
-          initial={{ opacity: 0, scale: 0.8, y: 50 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{
-          type: "spring",
-          stiffness: 100,
-          damping: 10,
-          duration: 1.2,
-          }}
-        >
-        About Me
-        </motion.h1>
-
-
-        {/* Introduction Section with slide-in animation */}
-        <motion.div
-          className="bg-opacity-70 bg-gray-700 text-gray-100 rounded-3xl shadow-xl p-8 md:p-12"
-          initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
-          <p className="text-lg md:text-xl">
-            Hello! I'm <span className="text-gray-100 font-bold">Lihini Chamiduni Wickrama Senevirathna</span>, an
-            aspiring IT professional currently pursuing a <span className="text-yellow-400 font-bold">Bachelor of Information Technology (BIT)</span>
-            external degree at the prestigious <em>University of Moratuwa</em>. My passion lies in leveraging technology to
-            create efficient, innovative solutions that solve real-world problems.
-          </p>
-        </motion.div>
-
-        {/* Certifications Section */}
-        <motion.div
-          className="mt-12"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
+        {/* Title */}
         <motion.h2
-          className="text-4xl font-bold text-center text-yellow-500 mb-6"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{
-          opacity: 1,
-            y: 0,
-           transition: { duration: 1, ease: "easeOut" }
-          }}
-          whileHover={{
-            scale: 1.1,
-            transition: { duration: 0.3 },
-          }}
-          whileTap={{
-            scale: 0.95,
-            transition: { duration: 0.1 },
-          }}
-          exit={{
-            opacity: 0,
-            y: 50,
-            transition: { duration: 0.5 },
-          }}
+          className="text-4xl font-extrabold text-center text-yellow-400"
+          variants={sectionVariants}
+          initial="hidden"
+          animate="visible"
         >
-        Certifications
+          About Me
         </motion.h2>
+        <motion.p
+          className="mt-6 text-lg text-center text-gray-200"
+          variants={sectionVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          Hello! I'm <strong>Lihini Chamiduni Wickrama Senevirathna</strong>, an
+          aspiring IT professional pursuing a{" "}
+          <strong>Bachelor of Information Technology (BIT)</strong> at the
+          University of Moratuwa.
+        </motion.p>
 
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-             {/* Certification 1 - CMJD */}
-             <motion.div
-              className="bg-opacity-70 bg-gray-600 text-white rounded-2xl shadow-lg p-6 flex flex-col items-center"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-            >
-              <img
-                src={certi1}
-                alt="cmjd Certification"
-                className="w-full h-full object-contain rounded-lg mb-4 "
-              />
-              <h3 className="text-xl font-bold text-gray-100">Diploma in Comprehensive Master Java Developer-IJSE(Institute of Software Engineering)</h3>
-              
-
-            </motion.div>
-
-            {/* Certification 2 - Web Design */}
-            <motion.div
-              className="bg-opacity-70 bg-gray-600 text-white rounded-2xl shadow-lg p-6 flex flex-col items-center"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-            >
-              <img
-                src={certi2}
-                alt="Web Design Certification"
-                className="w-full h-full object-contain rounded-lg mb-4 "
-              />
-              <h3 className="text-xl font-bold text-gray-100">Web Design for Beginners </h3>
-              <h3 className="text-xl font-bold text-gray-100">University of Moratuwa (CODL) </h3>
-
-            </motion.div>
-
-            {/* Certification 3 - Frontend */}
-            <motion.div
-              className="bg-opacity-70 bg-gray-600 text-white rounded-2xl shadow-lg p-6 flex flex-col items-center"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-            >
-              <img
-                src={certi3}
-                alt="Frontend Development Certification"
-                className="w-full h-full object-contain rounded-lg mb-4"
-              />
-              <h3 className="text-xl font-bold text-gray-100">Frontend Web Development </h3>
-              <h3 className="text-xl font-bold text-gray-100">University of Moratuwa (CODL) </h3>
-            </motion.div>
-
-            {/* Certification 4 - Server Side */}
-            <motion.div
-              className="bg-opacity-70 bg-gray-600 text-white rounded-2xl shadow-lg p-6 flex flex-col items-center"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-            >
-              <img
-                src={certi4}
-                alt="Server Side Development Certification"
-                className="w-full h-full object-contain rounded-lg mb-4"
-              />
-              <h3 className="text-xl font-bold text-gray-100">Server Side Web Development</h3>
-              <h3 className="text-xl font-bold text-gray-100">University of Moratuwa (CODL) </h3>
-            </motion.div>
-
-            {/* Certification 5 - Python 1 */}
-            <motion.div
-              className="bg-opacity-70 bg-gray-600 text-white rounded-2xl shadow-lg p-6 flex flex-col items-center"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.8 }}
-            >
-              <img
-                src={certi5}
-                alt="Python Certification 1"
-                className="w-full h-full object-contain rounded-lg mb-4"
-              />
-              <h3 className="text-xl font-bold text-gray-100">Python for Beginners</h3>
-              <h3 className="text-xl font-bold text-gray-100">University of Moratuwa (CODL) </h3>
-            </motion.div>
-
-            {/* Certification 6 - Python 2 */}
-            <motion.div
-              className="bg-opacity-70 bg-gray-600 text-white rounded-2xl shadow-lg p-6 flex flex-col items-center"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1, duration: 0.8 }}
-            >
-              <img
-                src={certi6}
-                alt="Python Certification 2"
-                className="w-full h-full object-contain rounded-lg mb-4"
-              />
-              <h3 className="text-xl font-bold text-gray-100">Python Programming</h3>
-              <h3 className="text-xl font-bold text-gray-100">University of Moratuwa (CODL) </h3>
-            </motion.div>
-
-            {/* Certification 7 - MS Project */}
-            <motion.div
-              className="bg-opacity-70 bg-gray-600 text-white rounded-2xl shadow-lg p-6 flex flex-col items-center"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1, duration: 0.8 }}
-            >
-              <img
-                src={certi7}
-                alt="MS Project"
-                className="w-full h-full object-contain rounded-lg mb-4"
-              />
-              <h3 className="text-xl font-bold text-gray-100">MS Project</h3>
-              <h3 className="text-xl font-bold text-gray-100">Tectra Academy</h3>
-            </motion.div>
-
-            {/* Certification 8 - MEP QS */}
-            <motion.div
-              className="bg-opacity-70 bg-gray-600 text-white rounded-2xl shadow-lg p-6 flex flex-col items-center"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1, duration: 0.8 }}
-            >
-              <img
-                src={certi8}
-                alt="MEP QS"
-                className="w-full h-full object-contain rounded-lg mb-4"
-              />
-              <h3 className="text-xl font-bold text-gray-100">MEP QS</h3>
-              <h3 className="text-xl font-bold text-gray-100">Tectra Academy</h3>
-            </motion.div>
-            {/* Certification 9 - Civil QS */}
-            <motion.div
-              className="bg-opacity-70 bg-gray-600 text-white rounded-2xl shadow-lg p-6 flex flex-col items-center"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1, duration: 0.8 }}
-            >
-              <img
-                src={certi9}
-                alt="Civil QS"
-                className="w-full h-full object-contain rounded-lg mb-4"
-              />
-              <h3 className="text-xl font-bold text-gray-100">Civil QS</h3>
-              <h3 className="text-xl font-bold text-gray-100">Tectra Academy</h3>
-            </motion.div>
-          </div>
-        </motion.div>
-
-        {/* Skills Section with fade-in and staggered effect */}
+        {/* My Story Section */}
         <motion.div
           className="mt-12"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.5 }}
+          variants={sectionVariants}
+          initial="hidden"
+          animate="visible"
         >
-          <motion.h2
-            className="text-4xl font-bold text-center text-yellow-500 mb-6"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-          >
-            My Skills
-          </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {/* Technical Skills */}
-            <motion.div
-              className="bg-opacity-70 bg-gray-600 text-white rounded-2xl shadow-lg p-8"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-            >
-              <h3 className="text-xl font-bold text-yellow-500 mb-4">Technical Skills</h3>
-              <ul className="list-disc ml-6">
-                <li>Backend Development: Java, Spring Boot</li>
-                <li>Frontend Development: React, HTML, CSS, JavaScript, TypeScript</li>
-                <li>Database Management: MySQL, SQL</li>
-                <li>Version Control: Git, GitHub</li>
-                <li>REST API Development</li>
-              </ul>
-            </motion.div>
-
-            
-
-            {/* Soft Skills */}
-            <motion.div
-              className="bg-opacity-70 bg-gray-600 text-white rounded-2xl shadow-lg p-8"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-            >
-              <h3 className="text-xl font-bold text-yellow-500 mb-4">Soft Skills</h3>
-              <ul className="list-disc ml-6">
-                <li>Problem-Solving</li>
-                <li>Teamwork</li>
-                <li>Adaptability</li>
-                <li>Time Management</li>
-              </ul>
-            </motion.div>
-          </div>
-        </motion.div>
-
-        {/* Call to Action Section with bounce effect */}
-        <motion.div
-      className="mt-12 text-center"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-    >
-      <p className="text-lg">
-        I am currently seeking an <strong>internship opportunity</strong> in the IT industry, where I can contribute my skills,
-        grow professionally, and make a meaningful impact.
-      </p>
-      <motion.button
-        onClick={handleGetInTouch}
-        className="inline-block mt-6 bg-yellow-500 text-black text-lg font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-600"
-        whileHover={{ scale: 1.1 }}
-      >
-        Get In Touch
-      </motion.button>
-
-      {showContact && (
-        <motion.div
-          className="mt-8 text-center bg-gray-100 p-6 rounded-lg shadow-lg"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          <h3 className="text-2xl font-bold text-gray-800">Contact Details</h3>
-          <p className="mt-2 text-lg text-gray-600">
-            Email: lihinichami1998@gmail.com
+          <h3 className="text-2xl font-semibold text-yellow-400">🎓 My Story</h3>
+          <p className="mt-4 text-lg text-gray-300 leading-relaxed">
+          My educational journey began with a focus on <strong>Civil Engineering</strong>, earning a{" "}
+          <strong>National Diploma in Civil Engineering</strong> from the Rathmalana Technical College. During this time, I developed a
+          strong foundation in technical problem-solving and analytical thinking.
           </p>
-          <p className="text-lg text-gray-600">Phone: +94 77 421 3509</p>
+          <p className="mt-4 text-lg text-gray-300 leading-relaxed">
+          However, my passion for innovation and technology inspired me to pivot toward the IT field, where I discovered my true calling.
+          This decision led me to pursue a <strong>Bachelor of Information Technology</strong> at the University of Moratuwa, complemented
+          by certifications in <strong>Full Stack Development</strong>, <strong>Java Development</strong>, and other technology-driven
+          disciplines.
+          </p>
+          <p className="mt-4 text-lg text-gray-300 leading-relaxed">
+          This transition not only shaped my career path but also equipped me with a unique perspective, combining the structured approach
+          of engineering with the dynamic problem-solving mindset of IT. Today, I’m dedicated to building impactful software solutions while
+          continuing to learn and grow in this exciting field.
+          </p>
         </motion.div>
-      )}
-    </motion.div>
+
+        {/* Skills Section */}
+        <motion.div
+          className="mt-12"
+          variants={listVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <h3 className="text-2xl font-semibold text-yellow-400">
+            💻 My Skills and Expertise
+          </h3>
+          <ul className="mt-4 text-lg text-gray-300 list-disc list-inside">
+            {[
+              "Programming Languages: Java, Python, C#, JavaScript",
+              "Frameworks & Tools: Spring Boot, React, MySQL, Hibernate",
+              "Web Development: HTML, CSS, Tailwind CSS",
+              "Others: MS Office, AutoCAD, MS Project",
+            ].map((skill, index) => (
+              <motion.li
+                key={index}
+                className="mt-2"
+                variants={itemVariants}
+              >
+                {skill}
+              </motion.li>
+            ))}
+          </ul>
+        </motion.div>
+
+        {/* My Vision Section */}
+        <motion.div
+          className="mt-12"
+          variants={sectionVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <h3 className="text-2xl font-semibold text-yellow-400">
+            🎯 My Vision
+          </h3>
+          <p className="mt-4 text-lg text-gray-300 leading-relaxed">
+            I aspire to become an expert software engineer, contributing to
+            transformative projects that improve lives. My career goal is to
+            bridge innovation with real-world impact.
+          </p>
+        </motion.div>
+
+        {/* Beyond Coding Section */}
+        <motion.div
+          className="mt-12"
+          variants={sectionVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <h3 className="text-2xl font-semibold text-yellow-400">
+            🎉 Beyond Coding
+          </h3>
+          <ul className="mt-4 text-lg text-gray-300 list-disc list-inside">
+            {[
+              "Exploring emerging technologies and trends",
+              "Reading and brainstorming creative design ideas",
+              "Learning something new every day to expand my knowledge",
+            ].map((hobby, index) => (
+              <motion.li
+                key={index}
+                className="mt-2"
+                variants={itemVariants}
+              >
+                {hobby}
+              </motion.li>
+            ))}
+          </ul>
+        </motion.div>
+
+        {/* Call to Action */}
+        <motion.div
+          className="mt-12 text-center"
+          initial="hidden"
+          animate="visible"
+          variants={sectionVariants}
+        >
+          <p className="text-lg text-gray-300">
+            I am currently seeking an{" "}
+            <strong>internship opportunity</strong> in the IT industry to
+            contribute my skills and grow professionally.
+          </p>
+          <motion.button
+            onClick={handleGetInTouch}
+            className="mt-6 bg-yellow-500 text-black font-bold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-600 hover:scale-105 transform transition-transform duration-300"
+            whileHover={{ scale: 1.1 }}
+          >
+            Get In Touch
+          </motion.button>
+
+          {showContact && (
+            <motion.div
+              className="mt-8 bg-gray-800 text-white p-6 rounded-lg shadow-lg"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h3 className="text-2xl font-bold">Contact Details</h3>
+              <p className="mt-2">Email: lihinichami1998@gmail.com</p>
+              <p>Phone: +94 77 421 3509</p>
+            </motion.div>
+          )}
+        </motion.div>
       </div>
     </section>
   );
