@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
         <p className="text-sm text-gray-400">© 2025 Lihini Chamiduni Wickrama Senevirathna</p>
         <div className="mt-2">
           <a
-            href="https://github.com/yourgithubprofile"
+            href="https://github.com/lchaminduni"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-yellow-400 mx-2"
@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
             GitHub
           </a>
           <a
-            href="https://www.linkedin.com/in/yourlinkedinprofile"
+            href="https://www.linkedin.com/in/lihini-senevirathna/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-yellow-400 mx-2"
@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
             LinkedIn
           </a>
           <a
-            href="https://twitter.com/yourtwitterprofile"
+            href=""
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-yellow-400 mx-2"

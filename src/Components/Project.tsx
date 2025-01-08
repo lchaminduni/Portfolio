@@ -7,7 +7,6 @@ import enrollmentImg from "/assets/enrollment.png";
 import registrationImg from "/assets/registration.png";
 import classManageImg from "/assets/classmanage.png";
 import paymentImg from "/assets/payment.png";
-import Footer from "./Footer";
 
 const images = [
   { src: loginImg, title: "Login Page" },

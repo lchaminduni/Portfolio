@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaHome, FaUser, FaProjectDiagram, FaFileAlt, FaTrophy, FaBlog } from "react-icons/fa";
+import { FaHome, FaUser, FaProjectDiagram, FaFileAlt, FaTrophy } from "react-icons/fa";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
