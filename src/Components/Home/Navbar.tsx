@@ -7,7 +7,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="bg-gray-900 text-yellow-500 shadow-md fixed top-0 left-0 w-full z-50">
-      <div className="container mx-auto flex items-center justify-between px-6 py-4">
+      <div className="container mx-auto flex items-center justify-between px-6 py-6">
         {/* Logo */}
         <div className="text-3xl font-extrabold flex items-center space-x-2">
           <Link to="/" className="hover:text-yellow-300 transition-all">
@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
             { name: "Projects", path: "/portfolio/projects", icon: <FaProjectDiagram /> },
             { name: "Resume", path: "/portfolio/resume", icon: <FaFileAlt /> },
             { name: "Achievement", path: "/portfolio/achievement", icon: <FaTrophy /> },
-            { name: "Blogs", path: "/portfolio/blogs", icon: <FaBlog /> },
+            //{ name: "Blogs", path: "/portfolio/blogs", icon: <FaBlog /> },
           ].map((item, index) => (
             <Link
               key={index}
@@ -70,7 +70,7 @@ const Navbar: React.FC = () => {
           { name: "Projects", path: "/portfolio/projects", icon: <FaProjectDiagram /> },
           { name: "Resume", path: "/portfolio/resume", icon: <FaFileAlt /> },
           { name: "Achievement", path: "/portfolio/achievement", icon: <FaTrophy /> },
-          { name: "Blogs", path: "/portfolio/blogs", icon: <FaBlog /> },
+          //{ name: "Blogs", path: "/portfolio/blogs", icon: <FaBlog /> },
         ].map((item, index) => (
           <Link
             key={index}

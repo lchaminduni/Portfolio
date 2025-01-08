@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import cvFile from "/assets/cv.pdf";
+import Footer from "./Footer";
 
 const Resume: React.FC = () => {
   // Animation variants for sections
@@ -28,14 +29,14 @@ const Resume: React.FC = () => {
   };
 
   return (
-    <section className="bg-blue-50 text-gray-800 min-h-screen py-12 mt-10 relative overflow-hidden">
+    <section className="bg-blue-50 text-gray-800 min-h-screen  mt-10 relative overflow-hidden">
       {/* Background overlay */}
       <div className="absolute inset-0 bg-teal-100 opacity-30"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Title */}
         <motion.h1
-          className="text-5xl md:text-6xl font-bold text-center mb-8 text-coral-500"
+          className="text-5xl md:text-6xl font-bold text-center mt-12 mb-8 text-coral-500"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
@@ -239,6 +240,8 @@ const Resume: React.FC = () => {
           </motion.div>
         </motion.div>
       </div>
+      {/* Add the Footer at the bottom */}
+    <Footer />
     </section>
   );
 };  

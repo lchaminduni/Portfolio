@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import backgroundImage from "/assets/bground5.jpg";
 import image from "/assets/myphoto.jpg";
+import Footer from "./Footer";
 const AboutMe: React.FC = () => {
   const [showContact, setShowContact] = useState(false);
 
@@ -38,13 +39,13 @@ const AboutMe: React.FC = () => {
 
   return (
     <section
-      className="bg-cover bg-center text-white min-h-screen py-12 mt-10 relative"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
+      className="bg-cover bg-center text-white min-h-screen py-12 mt-8 relative"
+      style={{ backgroundImage: `url(${backgroundImage})`, paddingBottom: "0" }}
     >
       <div className="container mx-auto px-6 relative z-10">
         {/* Title */}
         <motion.h2
-          className="text-4xl font-extrabold text-center text-yellow-400"
+          className="text-5xl mt-12 font-extrabold text-center text-yellow-400"
           variants={sectionVariants}
           initial="hidden"
           animate="visible"
@@ -186,11 +187,11 @@ const AboutMe: React.FC = () => {
           </p>
           <motion.button
             onClick={handleGetInTouch}
-            className="mt-6 bg-yellow-500 text-black font-bold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-600 hover:scale-105 transform transition-transform duration-300"
+            className="mt-6 mb-5 bg-yellow-500 text-black font-bold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-600 hover:scale-105 transform transition-transform duration-300"
             whileHover={{ scale: 1.1 }}
           >
             Get In Touch
-          </motion.button>
+            </motion.button>
 
           {showContact && (
             <motion.div
@@ -205,8 +206,12 @@ const AboutMe: React.FC = () => {
             </motion.div>
           )}
         </motion.div>
+        
       </div>
+    {/* Add the Footer at the bottom */}
+    <Footer />
     </section>
+    
   );
 };
 

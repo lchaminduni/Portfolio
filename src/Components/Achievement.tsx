@@ -10,6 +10,7 @@ import certi6 from "/assets/python2.png";
 import certi7 from "/assets/MSProject.png";
 import certi8 from "/assets/MepQs.png";
 import certi9 from "/assets/CivilQs.png";
+import Footer from "./Footer";
 
 const AboutMe: React.FC = () => {
     const [showContact, setShowContact] = useState(false);
@@ -19,15 +20,15 @@ const AboutMe: React.FC = () => {
 
   return (
     <section
-      className="bg-cover bg-center text-white min-h-screen py-12 mt-10 relative"
+      className="bg-cover bg-center text-white min-h-screen relative pt-6"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 pt-0">
         {/* Title with enhanced fade-in and scaling animation */}
         <motion.h1
-          className="text-5xl md:text-6xl font-bold text-center mb-8 text-yellow-500"
+          className="text-5xl md:text-5xl font-bold text-center mb-8 mt-20 text-yellow-500"
           initial={{ opacity: 0, scale: 0.8, y: 50 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{
@@ -213,7 +214,7 @@ const AboutMe: React.FC = () => {
       </p>
       <motion.button
         onClick={handleGetInTouch}
-        className="inline-block mt-6 bg-yellow-500 text-black text-lg font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-600"
+        className="inline-block mt-6 mb-4 bg-yellow-500 text-black text-lg font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-600"
         whileHover={{ scale: 1.1 }}
       >
         Get In Touch
@@ -235,6 +236,8 @@ const AboutMe: React.FC = () => {
       )}
     </motion.div>
       </div>
+      {/* Add the Footer at the bottom */}
+    <Footer />
     </section>
   );
 };

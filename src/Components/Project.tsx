@@ -7,6 +7,7 @@ import enrollmentImg from "/assets/enrollment.png";
 import registrationImg from "/assets/registration.png";
 import classManageImg from "/assets/classmanage.png";
 import paymentImg from "/assets/payment.png";
+import Footer from "./Footer";
 
 const images = [
   { src: loginImg, title: "Login Page" },
@@ -30,13 +31,13 @@ const Projects: React.FC = () => {
 
   return (
     <section
-      className="bg-cover bg-center text-white min-h-screen py-12 mt-10 relative"
+      className="bg-cover bg-center text-white min-h-screen py-10 mt-14 relative"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px- relative z-10">
         {/* Title Section */}
         <motion.h1
-          className="text-5xl md:text-6xl font-bold text-center mb-8 text-yellow-500"
+          className="text-5xl md:text-5xl font-bold text-center mb-8 text-yellow-500"
           initial={{ opacity: 0, scale: 0.8, y: 50 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{
@@ -83,7 +84,7 @@ const Projects: React.FC = () => {
               className="w-3/4 h-auto rounded-lg shadow-lg"
             />
           </motion.div>
-          <div className="text-center mt-4 text-xl font-bold text-gray-100">
+          <div className="text-center mt-4 text-xl font-bold text-gray-100 mb-10">
             {images[currentIndex].title}
           </div>
 
@@ -102,6 +103,7 @@ const Projects: React.FC = () => {
           </button>
         </div>
       </div>
+      
     </section>
   );
 };

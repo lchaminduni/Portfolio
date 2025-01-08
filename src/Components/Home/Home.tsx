@@ -5,6 +5,7 @@ import emailIcon from "/assets/email.png";
 import callIcon from "/assets/callicon2.png";
 import locationIcon from "/assets/location.webp";
 import "animate.css/animate.min.css";
+import Footer from "../Footer";
 const Home: React.FC = () => {
   return (
     <div>
@@ -89,7 +90,8 @@ const Home: React.FC = () => {
     </div>
   </div>
 </section>
-
+{/* Other page content */}
+<Footer />
     </div>
   );
 };
